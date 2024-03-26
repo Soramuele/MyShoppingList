@@ -1,40 +1,35 @@
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShoppingList : MonoBehaviour
 {
-    private Dictionary<int, string> products;
+    [SerializeField] private TMP_InputField _inputProducts;
+    private string[] products;
 
-    /// Awake is called when the script instance is being loaded
-    void Awake()
-    {
-        products = new Dictionary<int, string>() {
-            {00, "Apple Bandit"},   {01, "Banana"},
-            {02, "Beer"},           {03, "Cabbage"},
-            {04, "Chips"},          {05, "Cookie"},
-            {06, "Ground meat"},    {07, "Tofu"},
-            {08, "Yogurt"},         {09, "Tomatoes"},
-            {10, "Milk"},           {11, "Bread"},
-            {12, "Flour"},          {13, "Yeast"},
-            {14, "Tomato sauce"},   {15, "Pasta"},
-            {16, "Spaghetti"},      {17, "Cheese"},
-            {18, "Mushrooms"},      {19, "Eggs"},
-            {20, "Mozzarella"},     {21, "Spinach"},
-            {22, "Cooking cream"},  {23, "Fresh cream"},
-            {24, "Whipped cream"},  {25, "Onions"},
-            {26, "Garlic"},         {27, "Butter"}
-        };
-    }
+    [SerializeField] private string[] recipeBook =  {
+                                                        "eggs,butter,muffin mix" ,
+                                                        "pasta,tomato sauce,bacon,spices",
+                                                        "flour,yeast",
+                                                        "onions,carrots,ground meat,tomato sauce"
+                                                    };
 
-    // Start is called before the first frame update
-    void Start()
+    public void AnAbnormalCheckingList()
     {
-        
-    }
+        string[] check;
+        int i;
+        products = _inputProducts.text.Split(',');
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for(i = 0; i < recipeBook.Length; i++)
+        {
+            check = recipeBook[i].Split(',');
+
+            foreach (var key in products)
+                foreach (var prod in check)
+                    if (key == prod)
+                    {
+                        for (int j = 0; j < check.Length; j++)
+                            Debug.Log("Recipe with:" + check[j]);
+                    }
+        }
     }
 }

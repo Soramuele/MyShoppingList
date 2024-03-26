@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour
 		_mainCamera = Camera.main;
 		playerVelocity = speed;
 
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		//Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
 	}
 
 	private void Update()
@@ -58,13 +58,10 @@ public class PlayerController : MonoBehaviour
 		ApplyGravity();
 		ApplyMovement();
 
-		if(Input.GetKey(KeyCode.Escape) && Cursor.visible == false)
-		{
-			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = true;
-		} else {
-			Cursor.lockState = CursorLockMode.Locked;
-			Cursor.visible = false;
+		if (toggle == true && Input.GetKeyDown(KeyCode.Escape)) {
+				Debug.Log(toggle);
+				toggle = !toggle;
+				shoppingList.SetActive(toggle);
 		}
 	}
 
@@ -99,10 +96,12 @@ public class PlayerController : MonoBehaviour
 
 	public void Move(InputAction.CallbackContext context)
 	{
-		_input = context.ReadValue<Vector2>();
-		//if(_input != Vector2.zero)	animator.SetBool("isWalking", true);
-		//	else	animator.SetBool("isWalking", false);
-		_direction = new Vector3(_input.x, 0.0f, _input.y);
+		if(!toggle) {
+			_input = context.ReadValue<Vector2>();
+			//if(_input != Vector2.zero)	animator.SetBool("isWalking", true);
+			//	else	animator.SetBool("isWalking", false);
+			_direction = new Vector3(_input.x, 0.0f, _input.y);
+		}
 	}
 
 	public void Jump(InputAction.CallbackContext context)
@@ -128,7 +127,7 @@ public class PlayerController : MonoBehaviour
 
 	public void UseList(InputAction.CallbackContext context)
 	{
-		if (context.started) {
+		if (context.started && toggle == false) {
 			Debug.Log(toggle);
 			toggle = !toggle;
 			shoppingList.SetActive(toggle);
