@@ -29,9 +29,16 @@ public class CameraManager : MonoBehaviour
 
 	private void Update()
 	{
-		_cameraRotation.Yaw += _input.x * mouseSensitivity.horizontal * BoolToInt(mouseSensitivity.invertHorizontal) * Time.deltaTime;
-		_cameraRotation.Pitch += _input.y * mouseSensitivity.vertical * BoolToInt(mouseSensitivity.invertVertical) * Time.deltaTime;
-		_cameraRotation.Pitch = Mathf.Clamp(_cameraRotation.Pitch, cameraAngle.min, cameraAngle.max);
+		if (!shoppingList.activeInHierarchy)
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = true;
+			_cameraRotation.Yaw += _input.x * mouseSensitivity.horizontal * BoolToInt(mouseSensitivity.invertHorizontal) * Time.deltaTime;
+			_cameraRotation.Pitch += _input.y * mouseSensitivity.vertical * BoolToInt(mouseSensitivity.invertVertical) * Time.deltaTime;
+			_cameraRotation.Pitch = Mathf.Clamp(_cameraRotation.Pitch, cameraAngle.min, cameraAngle.max);
+		} else {
+			Cursor.lockState = CursorLockMode.None;
+		}
 	}
 
 	private void LateUpdate()

@@ -29,6 +29,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -85,9 +87,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: ShoppingList
-    methodName: AnAbnormalCheckingList
-  - assembly: Assembly-CSharp
     fullTypeName: PlayerController
     methodName: Move
   - assembly: Assembly-CSharp
@@ -97,13 +96,16 @@ ScriptsOnlyBuild:
     fullTypeName: PlayerController
     methodName: Sprint
   - assembly: Assembly-CSharp
+    fullTypeName: CameraManager
+    methodName: Look
+  - assembly: Assembly-CSharp
     fullTypeName: PlayerController
     methodName: UseList
   - assembly: Assembly-CSharp
     fullTypeName: ShoppingList
     methodName: AnAbnormalCheckingList
   sceneClasses:
-    Assets/Scenes/SC_SuperMarket.unity:
+    Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -128,53 +130,67 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16680}
+      Script: {instanceID: 16634}
     - Class: 114
-      Script: {instanceID: 16684}
+      Script: {instanceID: 16682}
     - Class: 114
-      Script: {instanceID: 16826}
+      Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 17356}
+      Script: {instanceID: 16828}
     - Class: 114
-      Script: {instanceID: 18060}
+      Script: {instanceID: 17358}
     - Class: 114
-      Script: {instanceID: 18388}
+      Script: {instanceID: 17844}
     - Class: 114
-      Script: {instanceID: 19092}
+      Script: {instanceID: 18062}
     - Class: 114
-      Script: {instanceID: 19538}
+      Script: {instanceID: 18390}
     - Class: 114
-      Script: {instanceID: 19552}
+      Script: {instanceID: 19094}
     - Class: 114
-      Script: {instanceID: 19844}
+      Script: {instanceID: 19542}
     - Class: 114
-      Script: {instanceID: 20444}
+      Script: {instanceID: 19556}
     - Class: 114
-      Script: {instanceID: 20650}
+      Script: {instanceID: 19848}
     - Class: 114
-      Script: {instanceID: 21270}
+      Script: {instanceID: 20448}
     - Class: 114
-      Script: {instanceID: 21462}
+      Script: {instanceID: 20654}
     - Class: 114
-      Script: {instanceID: 24028}
+      Script: {instanceID: 20664}
     - Class: 114
-      Script: {instanceID: 24032}
+      Script: {instanceID: 21466}
     - Class: 114
-      Script: {instanceID: 24040}
+      Script: {instanceID: 21826}
+    - Class: 114
+      Script: {instanceID: 22232}
+    - Class: 114
+      Script: {instanceID: 23538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -191,6 +207,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -979,6 +1001,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: c435c5c29ca177afee693114cb7bd968
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShoppingList
+  - hash:
+      serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1049,12 +1077,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineBrain
-  - hash:
-      serializedVersion: 2
-      Hash: 540882762544409cc4530e60db00e951
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: 560346f4cbb7006f1b0bb6c77805d7ec
@@ -1199,6 +1221,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: f4e2fc042c418c71841520801a64806e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraManager
   - hash:
       serializedVersion: 2
       Hash: 33eb495d99aa9bea4dbe8b4c4e02c7bb
@@ -1429,6 +1457,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: ef4d55c8b8adfc980c612a485fc3292e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: c8efb8be0478240d4791acc3735f449b
     assemblyName: Cinemachine
     namespaceName: 
@@ -1487,26 +1521,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: c435c5c29ca177afee693114cb7bd968
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ShoppingList
-  - hash:
-      serializedVersion: 2
-      Hash: f4e2fc042c418c71841520801a64806e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraManager
-  - hash:
-      serializedVersion: 2
-      Hash: ef4d55c8b8adfc980c612a485fc3292e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerController
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SC_SuperMarket.unity
+  - Assets/Scenes/SampleScene.unity
   playerPath: C:/Users/acer/Desktop/Unity Projects/LuckyFive/Lucky five project/build/Lucky
     five project.exe

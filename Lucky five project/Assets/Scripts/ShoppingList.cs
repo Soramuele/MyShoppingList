@@ -13,7 +13,7 @@ public class ShoppingList : MonoBehaviour
     {
         string[] check;
         int i;
-        products = _inputProducts.text.Split(',');
+        products = _inputProducts.text.Split('\n');
 
         for(i = 0; i < recipeBook.Length; i++)
         {
@@ -25,8 +25,10 @@ public class ShoppingList : MonoBehaviour
                     {
                         textRecommandation.text = "We recommand you: \n";
                         for (int j = 0; j < check.Length; j++)
-                            if (check[j] != key)
+                            if (check[j] != key) {
+                                Debug.Log(check[j]);
                                 textRecommandation.text += check[j] + "\n";
+                            }
                     }
         }
     }
