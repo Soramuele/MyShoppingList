@@ -4,14 +4,10 @@ using TMPro;
 public class ShoppingList : MonoBehaviour
 {
     [SerializeField] private TMP_InputField _inputProducts;
+    [SerializeField] private TMP_Text textRecommandation;
     private string[] products;
 
-    [SerializeField] private string[] recipeBook =  {
-                                                        "eggs,butter,muffin mix" ,
-                                                        "pasta,tomato sauce,bacon,spices",
-                                                        "flour,yeast",
-                                                        "onions,carrots,ground meat,tomato sauce"
-                                                    };
+    [SerializeField] private string[] recipeBook;
 
     public void AnAbnormalCheckingList()
     {
@@ -27,8 +23,10 @@ public class ShoppingList : MonoBehaviour
                 foreach (var prod in check)
                     if (key == prod)
                     {
+                        textRecommandation.text = "We recommand you: \n";
                         for (int j = 0; j < check.Length; j++)
-                            Debug.Log("Recipe with:" + check[j]);
+                            if (check[j] != key)
+                                textRecommandation.text += check[j] + "\n";
                     }
         }
     }

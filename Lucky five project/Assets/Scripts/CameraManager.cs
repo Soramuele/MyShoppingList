@@ -17,6 +17,9 @@ public class CameraManager : MonoBehaviour
 
 	#endregion
 
+	[SerializeField] private GameObject shoppingList;
+
+
 	private void Awake() => _distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
 	public void Look(InputAction.CallbackContext context)
@@ -26,9 +29,12 @@ public class CameraManager : MonoBehaviour
 
 	private void Update()
 	{
-		_cameraRotation.Yaw += _input.x * mouseSensitivity.horizontal * BoolToInt(mouseSensitivity.invertHorizontal) * Time.deltaTime;
-		_cameraRotation.Pitch += _input.y * mouseSensitivity.vertical * BoolToInt(mouseSensitivity.invertVertical) * Time.deltaTime;
-		_cameraRotation.Pitch = Mathf.Clamp(_cameraRotation.Pitch, cameraAngle.min, cameraAngle.max);
+		if (shoppingList.activeInHierarchy == false)
+		{
+			_cameraRotation.Yaw += _input.x * mouseSensitivity.horizontal * BoolToInt(mouseSensitivity.invertHorizontal) * Time.deltaTime;
+			_cameraRotation.Pitch += _input.y * mouseSensitivity.vertical * BoolToInt(mouseSensitivity.invertVertical) * Time.deltaTime;
+			_cameraRotation.Pitch = Mathf.Clamp(_cameraRotation.Pitch, cameraAngle.min, cameraAngle.max);
+		}
 	}
 
 	private void LateUpdate()

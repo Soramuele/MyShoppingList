@@ -54,11 +54,15 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
-		ApplyRotation();
-		ApplyGravity();
-		ApplyMovement();
-
-		if (toggle == true && Input.GetKeyDown(KeyCode.Escape)) {
+		if (toggle == false)
+		{
+			ApplyRotation();
+			ApplyGravity();
+			ApplyMovement();
+		}
+		
+		if (toggle == true && Input.GetKeyDown(KeyCode.Escape))
+		{
 				Debug.Log(toggle);
 				toggle = !toggle;
 				shoppingList.SetActive(toggle);
