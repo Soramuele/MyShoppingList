@@ -17,10 +17,13 @@ public class CameraManager : MonoBehaviour
 
 	#endregion
 
+	[SerializeField] GameObject shoppingList;
+
 	private void Awake() => _distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
 	public void Look(InputAction.CallbackContext context)
 	{
+		if (!shoppingList.activeInHierarchy)
 		_input = context.ReadValue<Vector2>();
 	}
 

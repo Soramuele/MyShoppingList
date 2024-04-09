@@ -54,9 +54,12 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
-		ApplyRotation();
-		ApplyGravity();
-		ApplyMovement();
+		if (!toggle)
+		{
+			ApplyRotation();
+			ApplyGravity();
+			ApplyMovement();
+		}
 
 		if (toggle == true && Input.GetKeyDown(KeyCode.Escape)) {
 				Debug.Log(toggle);
@@ -108,7 +111,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!context.started) return;
 		if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
-		if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
+		if (_numberOfJumps == 0 && !toggle)
+			StartCoroutine(WaitForLanding());
 		
 		_numberOfJumps++;
 		_velocity = jumpPower;
