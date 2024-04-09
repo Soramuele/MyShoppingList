@@ -23,7 +23,7 @@ public class ShoppingList : MonoBehaviour
                 foreach (var prod in check)
                     if (key == prod)
                     {
-                        textRecommandation.text = "We recommand you: \n";
+                        textRecommandation.text = "We recommend you: \n";
                         for (int j = 0; j < check.Length; j++)
                             if (check[j] != key) {
                                 Debug.Log(check[j]);
