@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -37,19 +36,17 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private int maxNumberOfJumps = 2;
 
 	#endregion
-	//private Animator animator;
+	#region Variables: Shopping List
 	[SerializeField] private GameObject shoppingList;
 	private bool toggle = false;
+
+	#endregion
 
 	private void Awake()
 	{
 		_characterController = GetComponent<CharacterController>();
-		//animator = GetComponentInChildren<Animator>();
 		_mainCamera = Camera.main;
 		playerVelocity = speed;
-
-		//Cursor.lockState = CursorLockMode.Locked;
-		//Cursor.visible = false;
 	}
 
 	private void Update()
@@ -101,8 +98,6 @@ public class PlayerController : MonoBehaviour
 	{
 		if(!toggle) {
 			_input = context.ReadValue<Vector2>();
-			//if(_input != Vector2.zero)	animator.SetBool("isWalking", true);
-			//	else	animator.SetBool("isWalking", false);
 			_direction = new Vector3(_input.x, 0.0f, _input.y);
 		}
 	}
@@ -122,10 +117,8 @@ public class PlayerController : MonoBehaviour
 	{
         if (context.started || context.performed) {
 			playerVelocity = speed + sprintModifier;
-			//animator.SetBool("isRunning", true);
 		} else if (context.canceled) {
 			playerVelocity = speed;
-			//animator.SetBool("isRunning", false);
 		}
 	}
 
