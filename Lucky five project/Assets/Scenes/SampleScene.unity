@@ -52122,6 +52122,8 @@ GameObject:
   - component: {fileID: 862265188}
   - component: {fileID: 862265187}
   - component: {fileID: 862265186}
+  - component: {fileID: 862265193}
+  - component: {fileID: 862265192}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -52265,6 +52267,34 @@ Transform:
   - {fileID: 664787920}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862265192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862265185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f60a5521a1fce944971d8c1bd27f68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &862265193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862265185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f3cbd5a0b7fc84eb94ea671695c023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 0}
+  latitude: 0
+  longitude: 0
+  isActive: 0
 --- !u!1 &862646952
 GameObject:
   m_ObjectHideFlags: 0
