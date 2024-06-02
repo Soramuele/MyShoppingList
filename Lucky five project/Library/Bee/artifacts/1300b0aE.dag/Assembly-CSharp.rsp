@@ -376,13 +376,13 @@
 "Assets/Scripts/FloatingJoystick.cs"
 "Assets/Scripts/Gyroscope.cs"
 "Assets/Scripts/Input System/GameInput.cs"
-"Assets/Scripts/LookForYourProduct.cs"
 "Assets/Scripts/Old/CameraManager.cs"
 "Assets/Scripts/Old/PlayerController.cs"
+"Assets/Scripts/Old/ShoppingList.cs"
 "Assets/Scripts/PlayerTouchMovement.cs"
+"Assets/Scripts/ProductsScriptableObject.cs"
 "Assets/Scripts/RecipeManager.cs"
 "Assets/Scripts/ScrollViewItem.cs"
-"Assets/Scripts/ShoppingList.cs"
 -langversion:9.0
 
 /deterministic

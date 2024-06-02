@@ -65,18 +65,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Input System\GameInput.cs" />
-    <Compile Include="Assets\Scripts\LookForYourProduct.cs" />
+    <Compile Include="Assets\Scripts\Old\ShoppingList.cs" />
     <Compile Include="Assets\Scripts\DynamicShoppingList.cs" />
     <Compile Include="Assets\Scripts\Old\CameraManager.cs" />
     <Compile Include="Assets\Scripts\RecipeManager.cs" />
     <Compile Include="Assets\Scripts\FloatingJoystick.cs" />
-    <Compile Include="Assets\Scripts\ShoppingList.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Gyroscope.cs" />
     <Compile Include="Assets\Scripts\PlayerTouchMovement.cs" />
     <Compile Include="Assets\Scripts\DynamicScrollView.cs" />
     <Compile Include="Assets\Scripts\ScrollViewItem.cs" />
     <Compile Include="Assets\Scripts\CheckItems.cs" />
+    <Compile Include="Assets\Scripts\ProductsScriptableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
