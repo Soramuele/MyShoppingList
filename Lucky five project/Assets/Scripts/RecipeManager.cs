@@ -32,6 +32,9 @@ public class RecipeManager : MonoBehaviour
         // Delete previous recipe
         while(scrollViewContent.childCount > 0)
             DestroyImmediate(scrollViewContent.GetChild(0).gameObject);
+        
+        // Clear previous body
+        recipePrefab.GetComponent<TextMeshProUGUI>().text = string.Empty;
 
         // Print every line of recipe and formatting
         foreach (string line in lines)
@@ -52,16 +55,12 @@ public class RecipeManager : MonoBehaviour
                 // Subdivide the recipe method into step
                 if (line.StartsWith("Step"))
                 {
-                    //Instantiate subtitle into scene
-                    recipePrefab.GetComponent<TextMeshProUGUI>().text = "<size=40><color=#3C3C3C>   " + line + "</color></size>";
-                    Instantiate(recipePrefab, scrollViewContent);
-                } else
-                {
-                    //Instantiate body into scene
-                    recipePrefab.GetComponent<TextMeshProUGUI>().text = line;
-                    Instantiate(recipePrefab, scrollViewContent);
+                    //Set body text
+                    recipePrefab.GetComponent<TextMeshProUGUI>().text += line + "\n";
                 }
             }
         }
+        // Instantiate body into scene
+        Instantiate(recipePrefab, scrollViewContent);
     }
 }

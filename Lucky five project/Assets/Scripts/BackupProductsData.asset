@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35591163588ecaa4e832e58b1989a02c, type: 3}
+  m_Name: BackupProductsData
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 6564198560628ec498079e12d8ee8835, type: 3}
+  - {fileID: 21300000, guid: 9b334dbb280d89d4db7aeda9c9cd6209, type: 3}
+  - {fileID: 21300000, guid: 4023f70ffc3fc2441b9b1a0d15ae5519, type: 3}
+  - {fileID: 21300000, guid: cbff693e1565ad043b2a3971ba31403d, type: 3}
+  - {fileID: 21300000, guid: 61b9a19d3675c584a81b58a0eee478c0, type: 3}
+  - {fileID: 21300000, guid: 72e6457a79ee1834eaf8fec427d1670d, type: 3}
+  - {fileID: 21300000, guid: e5e2deec404614d4494f67e5beba2015, type: 3}
+  - {fileID: 21300000, guid: 8e348c3da708c554bba8427b6d86782d, type: 3}
+  - {fileID: 21300000, guid: 766041125ecea6a4f9bce183e11261a3, type: 3}
+  - {fileID: 21300000, guid: 309d22b1c9d80174ca224ecd4fec793d, type: 3}
+  - {fileID: 21300000, guid: 6feb6c1073da6a64f86ace5a06fdb51e, type: 3}
+  - {fileID: 21300000, guid: 935f8f9c098f8c3499f01d4f0631217f, type: 3}
+  - {fileID: 21300000, guid: 5fed91281a69ef14a8589d38b1e202b8, type: 3}
+  - {fileID: 21300000, guid: 3e2ac4d256dda6646895481832e08ceb, type: 3}
+  - {fileID: 21300000, guid: 37659012f4cd6a7448a913bc68165fed, type: 3}
+  - {fileID: 21300000, guid: 2bb7bf6b5714b13498bd24505acad91b, type: 3}
+  - {fileID: 21300000, guid: 92347aaa81f0cdb44901721488c757f1, type: 3}
+  - {fileID: 21300000, guid: 0c5a4d8c6854cbe4bb3b0c84a3c7aadf, type: 3}
+  - {fileID: 21300000, guid: 188d3e114b1d2894382884be7311edcf, type: 3}
+  - {fileID: 21300000, guid: c0b0569a520af9a46a42bc87d2ac0e68, type: 3}
+  - {fileID: 21300000, guid: c668e5dc79b19b740b1c2b865a815bc0, type: 3}
+  - {fileID: 21300000, guid: 376851907c5088a42874caf5761d8754, type: 3}
+  - {fileID: 21300000, guid: 210b2464d8040fc4794f5ae0e7a60d96, type: 3}
+  - {fileID: 21300000, guid: 602ef173ef6599045890f6d79e9002ec, type: 3}
+  - {fileID: 21300000, guid: 01161ae246b5368479f27841e41c0afb, type: 3}
+  - {fileID: 21300000, guid: 96d26b0139ae1e349adc2f5d61add1c2, type: 3}
+  - {fileID: 21300000, guid: 9c0584217c18fb04bb1ba3e5079ad2f6, type: 3}
+  - {fileID: 21300000, guid: c881f1171ecf8d142855a04939adcc72, type: 3}
+  - {fileID: 21300000, guid: 437908d15dc5df54cacfd646c50fb128, type: 3}
+  - {fileID: 21300000, guid: 384ff5e559989a5458c5a450d7372cd8, type: 3}
+  - {fileID: 21300000, guid: bffe694d4b8fe744781e71635b0f24a4, type: 3}
+  - {fileID: 21300000, guid: efd5de4408396db40b1e0856724a0b9b, type: 3}
+  - {fileID: 21300000, guid: 12a3550ab0fdb134db3135afeb1712b3, type: 3}
+  - {fileID: 21300000, guid: 9c99f77aaa47b4e4e9c301b3f5cb2bd5, type: 3}
+  - {fileID: 21300000, guid: 185456e477182304e8a4ac8e3051b100, type: 3}
+  - {fileID: 21300000, guid: 5d8dfd5770e1faf4bb8adb51bba78c5c, type: 3}
+  - {fileID: 21300000, guid: 17bd9575af7c99e488802092b87d62ce, type: 3}
+  - {fileID: 21300000, guid: 147bd4632cd998942b77052fbb889f91, type: 3}
+  - {fileID: 21300000, guid: ee0e052269d635f4198aa19b2757a7ba, type: 3}
+  - {fileID: 21300000, guid: c2ad7e68f967b0448b1febd50921794d, type: 3}
+  - {fileID: 21300000, guid: 7e602b5ccf2daee43bd9be71c5f4c0d9, type: 3}
+  - {fileID: 21300000, guid: b330c03918eb3e2499299caead9b29d6, type: 3}
+  - {fileID: 21300000, guid: 1aaa9db5edfe51342998a66436e3833b, type: 3}
+  - {fileID: 21300000, guid: d8fbe65630c8bdc4bbc139921100d226, type: 3}
+  - {fileID: 21300000, guid: 1354b48fa63690c4299bb1f91122ba81, type: 3}
+  - {fileID: 21300000, guid: a07c3fd2ccbd22346b31a5dc92892d32, type: 3}
+  names:
+  - Almond milk
+  - Almonds
+  - Apple
+  - Apple juice
+  - Apricots
+  - Avocado
+  - Avocado oil
+  - Bacon
+  - Baking powder
+  - Baking soda
+  - Basil
+  - Bell pepper
+  - Bread
+  - Cabbage
+  - Carrots
+  - Celery
+  - Cheese
+  - Chocolate
+  - Coca cola
+  - Coffee
+  - Eggplant
+  - Eggs
+  - Fanta
+  - Flour
+  - Ground meat
+  - Ham
+  - Liquor
+  - Mango
+  - Milk
+  - Mushrooms
+  - Olive oil
+  - Onions
+  - Parmesan
+  - Pasta
+  - Pepper
+  - Potato
+  - Quinoa
+  - Rice
+  - Salt
+  - Tea
+  - Tomato
+  - Tomato sauce
+  - Tomato soup
+  - Vinegar
+  - Wine
+  - Yeast
+  prices:
+  - 2.49
+  - 3.99
+  - 2.49
+  - 3.29
+  - 2.99
+  - 1.35
+  - 8.49
+  - 3.25
+  - 0.39
+  - 1.79
+  - 1.19
+  - 0.79
+  - 1.29
+  - 2.09
+  - 1.69
+  - 1.65
+  - 2.59
+  - 0.85
+  - 1.69
+  - 5.19
+  - 1.05
+  - 2.79
+  - 0.79
+  - 0.89
+  - 3.79
+  - 2.47
+  - 15.59
+  - 1.99
+  - 1.19
+  - 2.99
+  - 6.99
+  - 1.79
+  - 4.49
+  - 0.95
+  - 2.99
+  - 1.65
+  - 3.09
+  - 1.79
+  - 0.65
+  - 2.29
+  - 1.59
+  - 1.35
+  - 1.69
+  - 1.49
+  - 5.29
+  - 0.85
+  totalPrice:
+  - 2.49
+  - 3.99
+  - 2.49
+  - 3.29
+  - 2.99
+  - 1.35
+  - 8.49
+  - 3.25
+  - 0.39
+  - 1.79
+  - 1.19
+  - 0.79
+  - 1.29
+  - 2.09
+  - 1.69
+  - 1.65
+  - 2.59
+  - 0.85
+  - 1.69
+  - 5.19
+  - 1.05
+  - 2.79
+  - 0.79
+  - 0.89
+  - 3.79
+  - 2.47
+  - 15.59
+  - 1.99
+  - 1.19
+  - 2.99
+  - 6.99
+  - 1.79
+  - 4.49
+  - 0.95
+  - 2.99
+  - 1.65
+  - 3.09
+  - 1.79
+  - 0.65
+  - 2.29
+  - 1.59
+  - 1.35
+  - 1.69
+  - 1.49
+  - 5.29
+  - 0.85
+  amount: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000
