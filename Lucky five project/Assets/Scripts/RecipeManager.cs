@@ -1,31 +1,26 @@
 using System.IO;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RecipeManager : MonoBehaviour
 {
     [Header("Scroll view")]
     [SerializeField] private Transform scrollViewContent;
-
-    [Header("Recipe document")]
-    [SerializeField] private string filePath;
-    [SerializeField] private string myDocument;
+    [SerializeField] private TMP_Text recipeTitle;
 
     [Header("Preparation")]
     [SerializeField] private GameObject sectionPrefab;
     [SerializeField] private GameObject ingredientsPrefab;
     [SerializeField] private GameObject recipePrefab;
 
-    // Initialize document path
-    void Start()
-    {
-        filePath = Application.dataPath + "/Recipes/" + myDocument + ".txt";
-    }
-
     // Read and print the recipe
-    public void CheckRecipe()
+    public void CheckRecipe(string myDocument)
     {
+        // Initialize document's path
+        string filePath = Application.dataPath + "/Recipes/" + myDocument + ".txt";
+
+        // Set title of the recipe
+        recipeTitle.text = myDocument;
         // Translate txt file into string array
         string[] lines = File.ReadAllLines(filePath);
 
@@ -34,7 +29,7 @@ public class RecipeManager : MonoBehaviour
             DestroyImmediate(scrollViewContent.GetChild(0).gameObject);
         
         // Clear previous body
-        recipePrefab.GetComponent<TextMeshProUGUI>().text = string.Empty;
+        recipePrefab.GetComponent<TextMeshProUGUI>().text = "";
 
         // Print every line of recipe and formatting
         foreach (string line in lines)
@@ -52,15 +47,11 @@ public class RecipeManager : MonoBehaviour
                 Instantiate(ingredientsPrefab, scrollViewContent);
             } else
             {
-                // Subdivide the recipe method into step
-                if (line.StartsWith("Step"))
-                {
                     //Set body text
                     recipePrefab.GetComponent<TextMeshProUGUI>().text += line + "\n";
-                }
             }
         }
         // Instantiate body into scene
-        Instantiate(recipePrefab, scrollViewContent);
+        GameObject myRecipe = Instantiate(recipePrefab, scrollViewContent);
     }
 }
