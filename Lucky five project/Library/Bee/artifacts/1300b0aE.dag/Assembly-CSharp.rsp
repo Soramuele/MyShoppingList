@@ -382,6 +382,7 @@
 "Assets/Scripts/PlayerTouchMovement.cs"
 "Assets/Scripts/ProductsScriptableObject.cs"
 "Assets/Scripts/RecipeManager.cs"
+"Assets/Scripts/RecipesScriptableObject.cs"
 "Assets/Scripts/ScrollViewItem.cs"
 -langversion:9.0
 

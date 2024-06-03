@@ -14,8 +14,6 @@ public class DynamicScrollView : MonoBehaviour
     [SerializeField] private TMP_InputField searchResult;
     [SerializeField] private GameObject noProductPrefab;
 
-    // Variable responsable for counting
-    private int count = 0;
     // Variable to check if products are already showing
     private bool showing = true;
 
@@ -23,21 +21,15 @@ public class DynamicScrollView : MonoBehaviour
     {
         // Show all products when starting the app
         ShowAll();
-        // Reset counter
-        count = 0;
     }
 
     void Update()
     {
         // Check if user isn't searching and products arent showing
-        if (!showing && string.IsNullOrWhiteSpace(searchResult.text))
+        if (!showing)
         {
             // Show all products
             ShowAll();
-
-            // Reset variables
-            showing = true;
-            count = 0;
         }
 
         // If there are no product in list, instantiate error message
@@ -48,22 +40,25 @@ public class DynamicScrollView : MonoBehaviour
     // Show all product
     private void ShowAll()
     {
+        // Set showing to true
+        showing = true;
+        
         // Destroy every object in list
         while (transform.childCount > 0)
             DestroyImmediate(transform.GetChild(0).gameObject);
-        
-        // Instantiate every product
-        foreach (Sprite changeSprite in productsData.sprites)
+
+        // Instantiate every product in data list
+        for (int i = 0; i < productsData.sprites.Length; i++)
         {
+            // Instantiate product
             GameObject product = Instantiate(productPrefab, scrollViewContent);
 
             // Set product data
             if (product.TryGetComponent<ScrollViewItem>(out ScrollViewItem item))
             {
-                item.ChangeData(changeSprite, productsData.names[count], productsData.prices[count], productsData.amount[count]);
-                item.name = productsData.names[count];
+                item.ChangeData(productsData.sprites[i], productsData.names[i], productsData.prices[i], productsData.amount[i]);
+                product.name = productsData.names[i];
             }
-            count++;
         }
     }
 
@@ -73,15 +68,17 @@ public class DynamicScrollView : MonoBehaviour
         // Check if user is actually searching for a product's name
         if (!string.IsNullOrWhiteSpace(searchResult.text))
         {
+            // Set showing to false, then show searched product
+            showing = false;
             // Destroy every object in list
             while (transform.childCount > 0)
                 DestroyImmediate(transform.GetChild(0).gameObject);
             
             // Check for product
-            foreach (Sprite changeSprite in productsData.sprites)
+            for (int i = 0; i < productsData.sprites.Length; i++)
             {
                 // Check if product exist
-                if (productsData.names[count].ToUpper().Contains(searchResult.text.ToUpper()))
+                if (productsData.names[i].ToUpper().Contains(searchResult.text.ToUpper()))
                 {
                     // Instantiate product
                     GameObject product = Instantiate(productPrefab, scrollViewContent);
@@ -89,16 +86,11 @@ public class DynamicScrollView : MonoBehaviour
                     // Set product data
                     if (product.TryGetComponent<ScrollViewItem>(out ScrollViewItem item))
                     {
-                        item.ChangeData(productsData.sprites[count], productsData.names[count], productsData.prices[count], productsData.amount[count]);
-                        product.name = productsData.names[count];
+                        item.ChangeData(productsData.sprites[i], productsData.names[i], productsData.prices[i], productsData.amount[i]);
+                        product.name = productsData.names[i];
                     }
                 }
-                count++;
             }
-
-            // Reset counter and set showing to false
-            count = 0;
-            showing = false;
         }
     }
 }
