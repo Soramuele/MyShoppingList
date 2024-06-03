@@ -294,12 +294,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2667208109333922212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4463468104786831413}
+  m_Father: {fileID: 6723721667884542237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -397,7 +397,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6723721667884542237}
-  - component: {fileID: 561786588045346091}
   m_Layer: 5
   m_Name: Recipe
   m_TagString: Untagged
@@ -418,6 +417,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4463468104786831413}
+  - {fileID: 714749617685142478}
   - {fileID: 1135419471998682880}
   - {fileID: 8045504294457000288}
   m_Father: {fileID: 0}
@@ -427,23 +427,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &561786588045346091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624081418980052155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 861e05d73045f634fa2bdb813ef73501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollViewContent: {fileID: 0}
-  myDocument: 
-  sectionPrefab: {fileID: 65534269556139534, guid: 92e4279e6000ea449a80b48600f388e4, type: 3}
-  ingredientsPrefab: {fileID: 212565855225918102, guid: 650680a8a334ca14a9410e9230d0c397, type: 3}
-  recipePrefab: {fileID: 6775822773626527277, guid: 4b9ada97f088e0140a900270c072f29c, type: 3}
 --- !u!1 &5111510282458440823
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +438,7 @@ GameObject:
   - component: {fileID: 4463468104786831413}
   - component: {fileID: 9156469642352542121}
   - component: {fileID: 6607076732442320203}
+  - component: {fileID: 3346578083260926710}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -473,8 +457,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 714749617685142478}
+  m_Children: []
   m_Father: {fileID: 6723721667884542237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -520,3 +503,47 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3346578083260926710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111510282458440823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 6607076732442320203}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
