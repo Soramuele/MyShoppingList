@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
+using Unity.VisualScripting;
 
 public class ScrollViewItem : MonoBehaviour
 {
@@ -87,5 +89,19 @@ public class ScrollViewItem : MonoBehaviour
             this.ChangeAmount(float.NaN, --amount);
         else
             DestroyImmediate(this.gameObject);
+    }
+
+    public void AddProduct()
+    {
+        // Find product position in names array
+        for (int count = 0; count < productsData.amount.Length; count++)
+        {
+            if (productsData.names[count] == this.name && this.GetComponentInChildren<Button>().gameObject.GetComponent<Image>().color == Color.white)
+            {
+                productsData.amount[count]++;
+                this.GetComponentInChildren<Button>().gameObject.GetComponent<Image>().color = new Color(60, 159, 226);
+                return;
+            }
+        }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gyroscope : MonoBehaviour
@@ -7,8 +5,10 @@ public class Gyroscope : MonoBehaviour
     private UnityEngine.Gyroscope phoneGyro;
     private Quaternion correctionQuaternion;
 
-    // Start is called before the first frame update
-    void Start()
+    public Vector3 cameraDirection;
+
+    // Awake is called when the script instance is being loaded.
+    void Awake()
     {
         phoneGyro = Input.gyro;
         phoneGyro.enabled = true;
@@ -36,17 +36,9 @@ public class Gyroscope : MonoBehaviour
         return new Quaternion(q.x, q.y, -q.z, -q.w);
     }
 
-    void OnGUI()
+    void UpdateCameraDirection()
     {
-        GUIStyle labelStyle = new GUIStyle()
-        {
-            fontSize = 24,
-            normal = new GUIStyleState()
-            {
-                textColor = Color.black
-            }
-        };
-
-        GUI.Label(new Rect(10, 100, 500, 20), $"{Input.gyro.attitude.x}, {Input.gyro.attitude.y}, {Input.gyro.attitude.z}, {Input.gyro.attitude.w}", labelStyle);
+        // Aggiorna la direzione della camera
+        cameraDirection = transform.forward;
     }
 }

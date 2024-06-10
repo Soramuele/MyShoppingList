@@ -14,9 +14,6 @@ public class DynamicScrollView : MonoBehaviour
     [SerializeField] private TMP_InputField searchResult;
     [SerializeField] private GameObject noProductPrefab;
 
-    // Variable to check if products are already showing
-    private bool showing = true;
-
     void Start()
     {
         // Show all products when starting the app
@@ -26,7 +23,7 @@ public class DynamicScrollView : MonoBehaviour
     void Update()
     {
         // Check if user isn't searching and products arent showing
-        if (!showing)
+        if (string.IsNullOrWhiteSpace(searchResult.text))
         {
             // Show all products
             ShowAll();
@@ -40,9 +37,6 @@ public class DynamicScrollView : MonoBehaviour
     // Show all product
     private void ShowAll()
     {
-        // Set showing to true
-        showing = true;
-        
         // Destroy every object in list
         while (transform.childCount > 0)
             DestroyImmediate(transform.GetChild(0).gameObject);
@@ -68,8 +62,6 @@ public class DynamicScrollView : MonoBehaviour
         // Check if user is actually searching for a product's name
         if (!string.IsNullOrWhiteSpace(searchResult.text))
         {
-            // Set showing to false, then show searched product
-            showing = false;
             // Destroy every object in list
             while (transform.childCount > 0)
                 DestroyImmediate(transform.GetChild(0).gameObject);

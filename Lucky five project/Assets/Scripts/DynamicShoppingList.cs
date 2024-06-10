@@ -50,6 +50,7 @@ public class DynamicShoppingList : MonoBehaviour
                 {
                     item.ChangeData(changeSprite, productsData.names[count], productsData.prices[count], ++productsData.amount[count]);
                     product.name = productsData.names[count];
+                    return;
                 }
             }
             count++;

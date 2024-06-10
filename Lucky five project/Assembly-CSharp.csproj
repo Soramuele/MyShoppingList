@@ -69,10 +69,12 @@
     <Compile Include="Assets\Scripts\DynamicShoppingList.cs" />
     <Compile Include="Assets\Scripts\Old\CameraManager.cs" />
     <Compile Include="Assets\Scripts\RecipeManager.cs" />
-    <Compile Include="Assets\Scripts\FloatingJoystick.cs" />
+    <Compile Include="Assets\Scripts\Old\PlayerTouchMovement.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Old\FloatingJoystick.cs" />
+    <Compile Include="Assets\Scripts\NewPlayerController.cs" />
     <Compile Include="Assets\Scripts\Gyroscope.cs" />
-    <Compile Include="Assets\Scripts\PlayerTouchMovement.cs" />
+    <Compile Include="Assets\Scripts\NewGyroscope.cs" />
     <Compile Include="Assets\Scripts\DynamicScrollView.cs" />
     <Compile Include="Assets\Scripts\ScrollViewItem.cs" />
     <Compile Include="Assets\Scripts\CheckItems.cs" />
