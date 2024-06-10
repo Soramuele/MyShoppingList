@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 861e05d73045f634fa2bdb813ef73501
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - scrollViewContent: {instanceID: 0}
+  - recipeTitle: {instanceID: 0}
+  - sectionPrefab: {fileID: 65534269556139534, guid: 92e4279e6000ea449a80b48600f388e4, type: 3}
+  - ingredientsPrefab: {fileID: 212565855225918102, guid: 650680a8a334ca14a9410e9230d0c397, type: 3}
+  - recipePrefab: {fileID: 6775822773626527277, guid: 4b9ada97f088e0140a900270c072f29c, type: 3}
+  - shoppingListContent: {instanceID: 0}
+  - productPrefab: {fileID: 6529796719415177794, guid: 94ac6a28b8a48664b8eb2ae5571c5fa8, type: 3}
+  - productsData: {fileID: 11400000, guid: 830200f35659d194b84ec238d4c87bb8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
