@@ -14,6 +14,8 @@ public class DynamicScrollView : MonoBehaviour
     [SerializeField] private TMP_InputField searchResult;
     [SerializeField] private GameObject noProductPrefab;
 
+    private bool showing = true;
+
     void Start()
     {
         // Show all products when starting the app
@@ -23,10 +25,11 @@ public class DynamicScrollView : MonoBehaviour
     void Update()
     {
         // Check if user isn't searching and products arent showing
-        if (string.IsNullOrWhiteSpace(searchResult.text))
+        if (string.IsNullOrWhiteSpace(searchResult.text) && !showing)
         {
             // Show all products
             ShowAll();
+            showing = true;
         }
 
         // If there are no product in list, instantiate error message
@@ -42,7 +45,9 @@ public class DynamicScrollView : MonoBehaviour
             DestroyImmediate(transform.GetChild(0).gameObject);
 
         // Instantiate every product in data list
-        for (int i = 0; i < productsData.sprites.Length; i++)
+
+        int i = 0;
+        foreach (Sprite sprite in productsData.sprites)
         {
             // Instantiate product
             GameObject product = Instantiate(productPrefab, scrollViewContent);
@@ -50,9 +55,10 @@ public class DynamicScrollView : MonoBehaviour
             // Set product data
             if (product.TryGetComponent<ScrollViewItem>(out ScrollViewItem item))
             {
-                item.ChangeData(productsData.sprites[i], productsData.names[i], productsData.prices[i], productsData.amount[i]);
+                item.ChangeData(sprite, productsData.names[i], productsData.prices[i], productsData.amount[i]);
                 product.name = productsData.names[i];
             }
+            i++;
         }
     }
 
@@ -62,6 +68,8 @@ public class DynamicScrollView : MonoBehaviour
         // Check if user is actually searching for a product's name
         if (!string.IsNullOrWhiteSpace(searchResult.text))
         {
+            showing = false;
+
             // Destroy every object in list
             while (transform.childCount > 0)
                 DestroyImmediate(transform.GetChild(0).gameObject);

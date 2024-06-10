@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\DynamicShoppingList.cs" />
     <Compile Include="Assets\Scripts\Old\CameraManager.cs" />
     <Compile Include="Assets\Scripts\RecipeManager.cs" />
+    <Compile Include="Assets\Scripts\CameraLook.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerTouchMovement.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Old\FloatingJoystick.cs" />

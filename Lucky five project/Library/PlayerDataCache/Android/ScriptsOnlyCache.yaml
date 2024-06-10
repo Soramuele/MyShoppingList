@@ -1,10 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraLook
     - DynamicScrollView
     - DynamicShoppingList
     - FloatingJoystick
-    - NewGyroscope
     - NewPlayerController
     - ProductsScriptableObject
     - RecipeManager
@@ -17,7 +17,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.InputDebuggerWindow
     - UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -581,77 +580,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20882}
     - Class: 114
-      Script: {instanceID: 21408}
+      Script: {instanceID: 21410}
     - Class: 114
-      Script: {instanceID: 21560}
+      Script: {instanceID: 21562}
     - Class: 114
-      Script: {instanceID: 21682}
+      Script: {instanceID: 21684}
     - Class: 114
-      Script: {instanceID: 21706}
+      Script: {instanceID: 21708}
     - Class: 114
-      Script: {instanceID: 21872}
+      Script: {instanceID: 21874}
     - Class: 114
-      Script: {instanceID: 21878}
+      Script: {instanceID: 21894}
     - Class: 114
-      Script: {instanceID: 21892}
+      Script: {instanceID: 21970}
     - Class: 114
-      Script: {instanceID: 21968}
+      Script: {instanceID: 21978}
     - Class: 114
-      Script: {instanceID: 21976}
+      Script: {instanceID: 22276}
     - Class: 114
-      Script: {instanceID: 22274}
+      Script: {instanceID: 22280}
     - Class: 114
-      Script: {instanceID: 22278}
+      Script: {instanceID: 22306}
     - Class: 114
-      Script: {instanceID: 22304}
+      Script: {instanceID: 22636}
     - Class: 114
-      Script: {instanceID: 22634}
+      Script: {instanceID: 22664}
     - Class: 114
-      Script: {instanceID: 22662}
+      Script: {instanceID: 22786}
     - Class: 114
-      Script: {instanceID: 22784}
+      Script: {instanceID: 23054}
     - Class: 114
-      Script: {instanceID: 23052}
+      Script: {instanceID: 23068}
     - Class: 114
-      Script: {instanceID: 23066}
+      Script: {instanceID: 23166}
     - Class: 114
-      Script: {instanceID: 23164}
+      Script: {instanceID: 23172}
     - Class: 114
-      Script: {instanceID: 23170}
+      Script: {instanceID: 23336}
     - Class: 114
-      Script: {instanceID: 23334}
+      Script: {instanceID: 23384}
     - Class: 114
-      Script: {instanceID: 23382}
+      Script: {instanceID: 23450}
     - Class: 114
-      Script: {instanceID: 23448}
+      Script: {instanceID: 23512}
     - Class: 114
-      Script: {instanceID: 23510}
+      Script: {instanceID: 23562}
     - Class: 114
-      Script: {instanceID: 23560}
+      Script: {instanceID: 23708}
     - Class: 114
-      Script: {instanceID: 23706}
+      Script: {instanceID: 23910}
     - Class: 114
-      Script: {instanceID: 23908}
+      Script: {instanceID: 24062}
     - Class: 114
-      Script: {instanceID: 24060}
+      Script: {instanceID: 24088}
     - Class: 114
-      Script: {instanceID: 24086}
+      Script: {instanceID: 24120}
     - Class: 114
-      Script: {instanceID: 24118}
+      Script: {instanceID: 24158}
     - Class: 114
-      Script: {instanceID: 24156}
+      Script: {instanceID: 24586}
     - Class: 114
-      Script: {instanceID: 24584}
+      Script: {instanceID: 24736}
     - Class: 114
-      Script: {instanceID: 24734}
+      Script: {instanceID: 25048}
     - Class: 114
-      Script: {instanceID: 25046}
+      Script: {instanceID: 25492}
     - Class: 114
-      Script: {instanceID: 25490}
+      Script: {instanceID: 25652}
     - Class: 114
-      Script: {instanceID: 25650}
+      Script: {instanceID: 25862}
     - Class: 114
-      Script: {instanceID: 25860}
+      Script: {instanceID: 57272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1427,7 +1426,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 840f5746fd8adcdb3e3077345198c63f
+      Hash: 438570a4438d800eba67e7382bb6183d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: NewPlayerController
@@ -1491,6 +1490,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 959c234bfb5d32dcd47c28e215e70662
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Gyroscope
   - hash:
       serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
@@ -2363,10 +2368,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 959c234bfb5d32dcd47c28e215e70662
+      Hash: 8fa3f8e5f854e6f6eccab1b54589c7c9
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Gyroscope
+    className: CameraLook
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
