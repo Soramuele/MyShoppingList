@@ -372,10 +372,14 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraLook.cs"
 "Assets/Scripts/CheckItems.cs"
+"Assets/Scripts/Collectable.cs"
+"Assets/Scripts/CollectableSpawner.cs"
+"Assets/Scripts/DrawPathWithNavMesh.cs"
 "Assets/Scripts/DynamicScrollView.cs"
 "Assets/Scripts/DynamicShoppingList.cs"
 "Assets/Scripts/Gyroscope.cs"
 "Assets/Scripts/Input System/GameInput.cs"
+"Assets/Scripts/LookGyroscope.cs"
 "Assets/Scripts/NewGyroscope.cs"
 "Assets/Scripts/NewPlayerController.cs"
 "Assets/Scripts/Old/CameraManager.cs"
@@ -386,6 +390,7 @@
 "Assets/Scripts/ProductsScriptableObject.cs"
 "Assets/Scripts/RecipeManager.cs"
 "Assets/Scripts/ScrollViewItem.cs"
+"Assets/Scripts/ShowNextItem.cs"
 -langversion:9.0
 
 /deterministic

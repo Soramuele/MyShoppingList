@@ -10,6 +10,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField][Range(0.0f, 10.0f)] private float rotSpeed = 4f;
     private Transform cameraMain;
     private Transform child;
+    [SerializeField] ShowNextItem suggestion;
 
     // Awake is called when the script instance is being loaded.
     void Awake()
@@ -52,5 +53,13 @@ public class NewPlayerController : MonoBehaviour
             child.rotation = Quaternion.Lerp(child.rotation, rotation, Time.deltaTime * rotSpeed);
         }
             
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            suggestion.ShowSuggestion();
+        }
     }
 }

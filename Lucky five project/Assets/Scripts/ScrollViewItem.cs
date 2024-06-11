@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Threading;
-using Unity.VisualScripting;
 
 public class ScrollViewItem : MonoBehaviour
 {

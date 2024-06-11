@@ -13,14 +13,19 @@ public class DynamicShoppingList : MonoBehaviour
     [Header("Products data")]
     [SerializeField] private ProductsScriptableObject productsData;
 
-    // Variable responsable for counting
+    // Variables responsable for counting
     private int count = 0;
+
+    void Update()
+    {
+    }
 
     // Add new product in shopping list
     public void AddProduct()
     {
         // Check if product already in shopping list
         for (count = 1; count < transform.childCount; count++)
+        {
             if (transform.GetChild(count).name.ToUpper() == input.text.ToUpper())
             {
                 transform.GetChild(count).TryGetComponent<ScrollViewItem>(out ScrollViewItem item);
@@ -32,6 +37,7 @@ public class DynamicShoppingList : MonoBehaviour
                 item.ChangeAmount(productsData.totalPrice[count], ++productsData.amount[count]);
                 return;
             }
+        }
 
         // Reset counting variable
         count = 0;
@@ -50,8 +56,8 @@ public class DynamicShoppingList : MonoBehaviour
                 {
                     item.ChangeData(changeSprite, productsData.names[count], productsData.prices[count], ++productsData.amount[count]);
                     product.name = productsData.names[count];
-                    return;
                 }
+                return;
             }
             count++;
         }

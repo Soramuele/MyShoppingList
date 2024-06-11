@@ -69,17 +69,22 @@
     <Compile Include="Assets\Scripts\DynamicShoppingList.cs" />
     <Compile Include="Assets\Scripts\Old\CameraManager.cs" />
     <Compile Include="Assets\Scripts\RecipeManager.cs" />
+    <Compile Include="Assets\Scripts\LookGyroscope.cs" />
     <Compile Include="Assets\Scripts\CameraLook.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerTouchMovement.cs" />
     <Compile Include="Assets\Scripts\Old\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Old\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\NewPlayerController.cs" />
+    <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Gyroscope.cs" />
+    <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\NewGyroscope.cs" />
     <Compile Include="Assets\Scripts\DynamicScrollView.cs" />
     <Compile Include="Assets\Scripts\ScrollViewItem.cs" />
     <Compile Include="Assets\Scripts\CheckItems.cs" />
     <Compile Include="Assets\Scripts\ProductsScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\ShowNextItem.cs" />
+    <Compile Include="Assets\Scripts\DrawPathWithNavMesh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -89,17 +94,20 @@
     <None Include="Assets\Recipes\Italian Beef Ragu.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Recipes\Vegetarian bolognese.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Recipes\Spaghetti.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Recipes\Muffins.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Recipes\Tacos.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Recipes\Apple Pie.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
